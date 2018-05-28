@@ -1,22 +1,24 @@
-Expedia has provided you logs of customer behavior. These include what customers searched for, how they interacted with search results (click/book), whether or not the search result was a travel package. The data in this competition is a random selection from Expedia and is not representative of the overall statistics.
+https://www.kaggle.com/c/titanic/data
 
-Expedia is interested in predicting which hotel group a user is going to book. Expedia has in-house algorithms to form hotel clusters, where similar hotels for a search (based on historical price, customer star ratings, geographical locations relative to city center, etc) are grouped together. These hotel clusters serve as good identifiers to which types of hotels people are going to book, while avoiding outliers such as new hotels that don't have historical data.
+The training set should be used to build your machine learning models. For the training set, we provide the outcome (also known as the “ground truth”) for each passenger. Your model will be based on “features” like passengers’ gender and class. You can also use feature engineering to create new features.
 
-Your goal of this competition is to predict the booking outcome (hotel cluster) for a user event, based on their search and other attributes associated with that user event.
+The test set should be used to see how well your model performs on unseen data. For the test set, we do not provide the ground truth for each passenger. It is your job to predict these outcomes. For each passenger in the test set, use the model you trained to predict whether or not they survived the sinking of the Titanic.
 
-The train and test datasets are split based on time: training data from 2013 and 2014, while test data are from 2015. The public/private leaderboard data are split base on time as well. Training data includes all the users in the logs, including both click events and booking events. Test data only includes booking events. 
+We also include gender_submission.csv, a set of predictions that assume all and only female passengers survive, as an example of what a submission file should look like.
 
-destinations.csv data consists of features extracted from hotel reviews text. 
+##Variable Notes
+pclass: A proxy for socio-economic status (SES)
+1st = Upper
+2nd = Middle
+3rd = Lower
 
-Note that some srch_destination_id's in the train/test files don't exist in the destinations.csv file. This is because some hotels are new and don't have enough features in the latent space. Your algorithm should be able to handle this missing information.
+age: Age is fractional if less than 1. If the age is estimated, is it in the form of xx.5
 
-File descriptions
-train.csv - the training set
-test.csv - the test set
-destinations.csv - hotel search latent attributes
-sample_submission.csv - a sample submission file in the correct format
-Data fields
-train/test.csv
+sibsp: The dataset defines family relations in this way...
+Sibling = brother, sister, stepbrother, stepsister
+Spouse = husband, wife (mistresses and fiancés were ignored)
 
-
-https://www.kaggle.com/c/expedia-hotel-recommendations/data
+parch: The dataset defines family relations in this way...
+Parent = mother, father
+Child = daughter, son, stepdaughter, stepson
+Some children travelled only with a nanny, therefore parch=0 for them.
