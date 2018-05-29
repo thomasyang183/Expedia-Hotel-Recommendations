@@ -12,6 +12,7 @@
     
 #3: Preprocess dataset/get it ready: 
     train.isnull().sum()   :See the amount of missing values per attribute
+    train.drop(['PassengerId','Name','Ticket'], axis=1, inplace=True)   :drop unnecessary columns that are not meaningful to analysis
     
     
 #4: Relationship between dependent variables and independent ones
