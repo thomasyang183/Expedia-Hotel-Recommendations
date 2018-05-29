@@ -1,4 +1,5 @@
 target variable: survived
+features: all other vairables
 
 #1: Import:  
     Dataset
@@ -15,9 +16,12 @@ target variable: survived
 #3: Preprocess dataset/get it ready: 
     train.isnull().sum()   :See the amount of missing values per attribute
     train.drop(['PassengerId','Name','Ticket'], axis=1, inplace=True)   :drop unnecessary columns that are not meaningful to analysis
-    
-    
-#4: Relationship between dependent variables and independent ones
+    **train['Age'] = train['Age'].fillna(train['Age'].median())   :fill the null/missing values with median
+
+
+#4: Visualization
+
+#5: Relationship between dependent variables and independent ones
 
 
 
