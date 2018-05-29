@@ -1,0 +1,23 @@
+#1: Import:  
+    Dataset
+    Packages
+    
+#2: Explore dataset: 
+    train.head() : print first few rows of records
+    understand meaning of each column/attribute
+    train.shape :  show the amount of rows and columns
+    train.describe()   :  show numerical summary for all the numerical columns
+    train.describe(include=['O'])    :show the descriptive statistics of object data types, detect duplicates
+    train.info()  : see more information about the attributes, a bit redundant to train.shape
+    
+#3: Preprocess dataset/get it ready: 
+    train.isnull().sum()   :See the amount of missing values per attribute
+    
+    
+#4: Relationship between dependent variables and independent ones
+
+
+
+
+
+    
